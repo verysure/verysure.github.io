@@ -1,0 +1,125 @@
+//- mixin
+mixin navbar_button()
+    button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+        span.sr-only Toggle navigation
+        for i in [1, 2, 3]
+            span.icon-bar
+                
+mixin navbar_list(section)
+    li: a.page-scroll(href="#"+section.id)= section.title
+        
+mixin subsection(section)
+    .container(id=section.id)
+        h1!= section.title
+        br
+        !{section.content}
+        
+mixin add_icon(url, icon)
+    a.icon(href=url, target="_blank"): i.fa.fa-2x(class=icon)
+            
+        
+        
+        
+doctype html
+html(lang="en")
+    
+    head
+        title= name
+        meta(name=name content="Created by verysure.")
+        include scripts.jade
+        
+        
+    body
+        //- Navigation Bar
+        .navbar.navbar-default.navbar-fixed-top.hide-bar(role="navigation")
+            .container
+                .navbar-header
+                    a.navbar-brand.page-scroll(href="#header")= name
+                    +navbar_button()
+                
+                .navbar-collapse.collapse
+                    ul.nav.navbar-nav.navbar-right
+                        for sec in sections
+                            +navbar_list(sec)
+        
+        
+        
+        #header.jumbotron
+            .container
+                #intro
+                    h1= name
+                    br
+                    p.
+                        Research Assistant <br>
+                        Electrical Engineering and Computer Science <br>
+                        Massachussets Institute of Technology
+                    
+                        
+        
+        
+        #content
+            
+            for sec in sections
+                +subsection(sec)
+            
+            //- garbage text
+            .container
+                h1 Test
+                p.
+                    Tony is a graduate student from #[a(href="http://en.wikipedia.org/wiki/Taiwan") Taiwan]. 
+                    He is currently studying at 
+                    #[a(href="http://www.mit.edu/", target="_blank") Massachussets Institute of Technology] 
+                    in the Department of Electrical Engineering and Computer Science.
+                    He received a B.S. in both Electrical Engineering and Physics from 
+                    #[a(href="http://www.ntu.edu.tw/", target="_blank") National Taiwan University] in 2011.
+                    Outside research, Tony is also interested in snowboarding, swimming and coding.
+                    
+            .container
+                h1 Test
+                p.
+                    Tony is a graduate student from #[a(href="http://en.wikipedia.org/wiki/Taiwan") Taiwan]. 
+                    He is currently studying at 
+                    #[a(href="http://www.mit.edu/", target="_blank") Massachussets Institute of Technology] 
+                    in the Department of Electrical Engineering and Computer Science.
+                    He received a B.S. in both Electrical Engineering and Physics from 
+                    #[a(href="http://www.ntu.edu.tw/", target="_blank") National Taiwan University] in 2011.
+                    Outside research, Tony is also interested in snowboarding, swimming and coding.
+                    
+            .container
+                h1 Test
+                p.
+                    Tony is a graduate student from #[a(href="http://en.wikipedia.org/wiki/Taiwan") Taiwan]. 
+                    He is currently studying at 
+                    #[a(href="http://www.mit.edu/", target="_blank") Massachussets Institute of Technology] 
+                    in the Department of Electrical Engineering and Computer Science.
+                    He received a B.S. in both Electrical Engineering and Physics from 
+                    #[a(href="http://www.ntu.edu.tw/", target="_blank") National Taiwan University] in 2011.
+                    Outside research, Tony is also interested in snowboarding, swimming and coding.
+                
+                    
+        //- things to add in footer. Contact, social media, include bootstrap, pyjade, pyscss, jinja, github
+        #footer.footer
+            .container
+                .row
+                    .contact.col-xs-5.
+                        Contact Me <br>
+                        #[+add_icon("mailto:ttttonywu@gmail.com"         , "fa-envelope-square")] &nbsp;&nbsp;
+                        #[+add_icon("https://www.facebook.com/ttttonywu" , "fa-facebook-square")] &nbsp;&nbsp;
+                        #[+add_icon("https://plus.google.com/+TonyWuC/"  , "fa-google-plus-square")]
+            
+                            
+                    .ack.col-xs-7.
+                        Designed with Bootstrap and Font Awesome. <br>
+                        Jinja2, PyJade and pyScss are used for templating.
+            
+        
+
+
+
+
+
+
+
+
+
+

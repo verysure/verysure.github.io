@@ -1,0 +1,96 @@
+html, body {
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300; }
+
+  .navbar-default {
+    background-color: black;
+    border-color: transparent; }
+    .navbar-default .navbar-collapse {
+      border-color: transparent;
+      box-shadow: 0 0 0 transparent; }
+      .navbar-default .navbar-toggle {
+        border-color: transparent; }
+        .navbar-default .navbar-toggle:focus {
+          background-color: transparent; }
+          .navbar-default .navbar-toggle:hover {
+            background-color: #ddd; }
+    .navbar-default .navbar-brand {
+      font-size: 36px;
+      color: white; }
+      .navbar-default .navbar-brand:hover {
+        color: white; }
+    .navbar-default .navbar-nav {
+      float: right; }
+      .navbar-default .navbar-nav li a {
+        font-size: 24px;
+        color: white; }
+        .navbar-default .navbar-nav li a:hover {
+          color: #777; }
+
+.hide-bar .navbar-brand {
+  display: none; }
+
+#header {
+  margin-right: 0px;
+  padding: 70px 0px 0px 0px;
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/header.jpg");
+  background-color: black;
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat; }
+  #header #intro {
+    width: 50%;
+    position: absolute;
+    bottom: 50px; }
+    #header h1 {
+      font-size: 36px;
+      color: white; }
+      #header p {
+        font-size: 24px;
+        color: #777; }
+
+#content .container {
+  padding-top: 50px; }
+  #content h1 {
+    font-size: 36px;
+    color: black; }
+    #content p {
+      font-size: 24px;
+      color: #777; }
+      #content img {
+        -webkit-border-radius: 15%;
+        -moz-border-radius: 15%;
+        border-radius: 15%;
+        padding: 0;
+        width: 100%; }
+        #content figcaption {
+          text-align: center;
+          font-size: 16px; }
+          #content .border-img {
+            border-style: solid;
+            border-width: 2px; }
+
+#footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #4F4F4F;
+  color: #ddd;
+  font-size: 24px; }
+  #footer .container {
+    position: relative; }
+    #footer .contact {
+      text-align: center; }
+      #footer .icon {
+        color: inherit; }
+        #footer .icon:hover {
+          color: white; }
+  #footer .ack {
+    color: #ddd;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right; }

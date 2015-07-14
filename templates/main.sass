@@ -1,0 +1,161 @@
+$large_font: 36px
+$small_font: 24px
+$tiny_font:  16px
+
+$header_main_color: white
+$header_sub_color: #777
+$navbar_button_color: #ddd
+
+
+$content_main_color: black
+$content_sub_color: #777
+
+$footer_bg_color: #4F4F4F
+$footer_main_color: #ddd
+$footer_sub_color: #ddd
+// $footer_large_font: 24px
+// $footer_small_font: 16px
+
+
+
+
+html, body 
+    height: 100%
+    font: 
+        family: "Ubuntu", sans-serif
+        weight: 300
+    
+
+
+
+
+// Navbar
+.navbar-default 
+    background-color : black
+    border-color     : transparent
+    // modification on the navbar collapsed button
+    .navbar-collapse
+        border-color: transparent
+        box-shadow: 0 0 0 transparent
+    .navbar-toggle
+        border-color: transparent
+        &:focus
+            background-color: transparent
+        &:hover
+            background-color: $navbar_button_color
+    // navbar logo
+    .navbar-brand 
+        font-size: $large_font
+        color: $header_main_color
+        &:hover
+            color: $header_main_color
+    // navbar right options styles
+    .navbar-nav 
+        float: right
+        li a 
+            font-size : $small_font
+            color     : $header_main_color
+            &:hover
+                color: $header_sub_color
+
+// properties if hide bar
+.hide-bar 
+    // background-color: transparent
+    .navbar-brand
+        display: none
+     
+
+
+
+
+// Header
+#header
+    margin-right: 0px
+    padding: 70px 0px 0px 0px
+    height: 100%
+    width: 100%
+    // Background
+    background: 
+        image: url("../img/header.jpg")
+        color: black
+        size: 100%
+        position: bottom
+        repeat: no-repeat
+    // nested style
+    #intro 
+        width: 50%
+        position: absolute
+        bottom: 50px
+    h1 
+        font-size: $large_font
+        color: $header_main_color
+    p 
+        font-size: $small_font
+        color: $header_sub_color
+    
+
+
+
+
+
+// Content style
+#content
+    .container
+        padding-top: 50px
+    h1 
+        font:
+            size: $large_font
+        color: $content_main_color
+    p 
+        font-size: $small_font
+        color: $content_sub_color
+    img
+        -webkit-border-radius: 15%
+        -moz-border-radius: 15%
+        border-radius: 15%
+        padding: 0
+        width: 100%
+    figcaption
+        text-align: center
+        font-size: $tiny_font
+    .border-img
+        border:
+            style: solid
+            width: 2px
+        
+
+
+
+
+// Footer style
+#footer
+    padding:
+        top: 10px
+        bottom: 10px
+    background-color: $footer_bg_color
+    color: $footer_main_color
+    font-size: $small_font
+    .container
+        position: relative
+    .contact
+        text-align: center
+    .icon
+        color: inherit
+        &:hover
+            color: white
+    .ack
+        color: $footer_sub_color
+        font-size: $tiny_font
+        position: absolute
+        bottom: 0
+        right: 0
+        text-align: right
+
+        
+        
+        
+        
+        
+        
+        
+        
