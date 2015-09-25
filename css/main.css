@@ -57,21 +57,23 @@ html, body {
   #content h1 {
     font-size: 36px;
     color: black; }
-    #content p {
+    #content .description {
       font-size: 24px;
       color: #777; }
-      #content img {
-        -webkit-border-radius: 15%;
-        -moz-border-radius: 15%;
-        border-radius: 15%;
-        padding: 0;
-        width: 100%; }
-        #content figcaption {
-          text-align: center;
-          font-size: 16px; }
-          #content .border-img {
-            border-style: solid;
-            border-width: 2px; }
+      #content .description li {
+        font-size: 16px; }
+#content img {
+  -webkit-border-radius: 15%;
+  -moz-border-radius: 15%;
+  border-radius: 15%;
+  padding: 0;
+  width: 100%; }
+  #content figcaption {
+    text-align: center;
+    font-size: 16px; }
+    #content .border-img {
+      border-style: solid;
+      border-width: 2px; }
 
 #footer {
   padding-top: 10px;
