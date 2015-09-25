@@ -32,10 +32,10 @@ research = {
     'content' : env.get_template('subpages/research.jade').render()
     }
 
-publication = {
-    'id': 'publication',
-    'title': 'Publication',
-    'content' : ''
+resume = {
+    'id': 'resume',
+    'title': 'Resume',
+    'content' : env.get_template('subpages/resume.jade').render()
     }
 
 # Interest
@@ -46,7 +46,8 @@ index_html = index_template.render(
     name = 'Tony Wu',
     sections = [
         about,
-        research
+        research,
+        resume
         ]
     )
 
